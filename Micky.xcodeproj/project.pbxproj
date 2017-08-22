@@ -330,6 +330,11 @@
 		EABC63241F4B285E00A28946 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EABC62DA1F4B285D00A28946 /* WXApiRequestHandler.m */; };
 		EABC63251F4B285E00A28946 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EABC62DC1F4B285D00A28946 /* WXApiResponseHandler.m */; };
 		EAC5076B1F4BF4C700493229 /* NSDictionary+String.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5076A1F4BF4C700493229 /* NSDictionary+String.m */; };
+		EAC507741F4C1EFF00493229 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC507731F4C1EFF00493229 /* NSString+MD5.m */; };
+		EAC507781F4C232600493229 /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = EAC507761F4C232600493229 /* private_key.p12 */; };
+		EAC507791F4C232600493229 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = EAC507771F4C232600493229 /* public_key.der */; };
+		EAC5077E1F4C23DA00493229 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5077B1F4C23DA00493229 /* NSData+Base64.m */; };
+		EAC5077F1F4C23DA00493229 /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC5077D1F4C23DA00493229 /* RSAEncryptor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1092,6 +1097,15 @@
 		EABC62DC1F4B285D00A28946 /* WXApiResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiResponseHandler.m; sourceTree = "<group>"; };
 		EAC507691F4BF4C700493229 /* NSDictionary+String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+String.h"; sourceTree = "<group>"; };
 		EAC5076A1F4BF4C700493229 /* NSDictionary+String.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+String.m"; sourceTree = "<group>"; };
+		EAC5076F1F4C1D9100493229 /* Micky-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Micky-Bridging-Header.h"; sourceTree = "<group>"; };
+		EAC507721F4C1EFF00493229 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		EAC507731F4C1EFF00493229 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		EAC507761F4C232600493229 /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
+		EAC507771F4C232600493229 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
+		EAC5077A1F4C23DA00493229 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		EAC5077B1F4C23DA00493229 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		EAC5077C1F4C23DA00493229 /* RSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
+		EAC5077D1F4C23DA00493229 /* RSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1213,6 +1227,7 @@
 		1809F9721DC0ABF500688016 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EAC507751F4C232600493229 /* rsa */,
 				6BC32E7A1E821FB800F5CFCF /* Micky-Prefix.pch */,
 				1809F9731DC0ABF500688016 /* main.m */,
 				1802F9781DDAFA0B00FCFF7A /* Localizable.strings */,
@@ -1262,6 +1277,7 @@
 				182AF9CE1DC48214001FDD0C /* SystemUtil.m */,
 				18F8FF461DDBF7DB00A57CE6 /* InternationalCintrol.h */,
 				18F8FF471DDBF7DB00A57CE6 /* InternationalCintrol.m */,
+				EAC5076F1F4C1D9100493229 /* Micky-Bridging-Header.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1349,6 +1365,12 @@
 		1809F9CF1DC0BADF00688016 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
+				EAC5077A1F4C23DA00493229 /* NSData+Base64.h */,
+				EAC5077B1F4C23DA00493229 /* NSData+Base64.m */,
+				EAC5077C1F4C23DA00493229 /* RSAEncryptor.h */,
+				EAC5077D1F4C23DA00493229 /* RSAEncryptor.m */,
+				EAC507721F4C1EFF00493229 /* NSString+MD5.h */,
+				EAC507731F4C1EFF00493229 /* NSString+MD5.m */,
 				EAC507691F4BF4C700493229 /* NSDictionary+String.h */,
 				EAC5076A1F4BF4C700493229 /* NSDictionary+String.m */,
 				182AF9D81DC483ED001FDD0C /* FCUUID */,
@@ -3020,6 +3042,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		EAC507751F4C232600493229 /* rsa */ = {
+			isa = PBXGroup;
+			children = (
+				EAC507761F4C232600493229 /* private_key.p12 */,
+				EAC507771F4C232600493229 /* public_key.der */,
+			);
+			path = rsa;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3052,6 +3083,7 @@
 					1809F96E1DC0ABF500688016 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = M5QHQ4M8Q3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -3102,6 +3134,7 @@
 				6B05A0291DD6CAC500F61223 /* MultipleDisplayPictureCell.xib in Resources */,
 				6B50382C1DC4A9C90083A9CB /* Images.xcassets in Resources */,
 				EABC62E21F4B285D00A28946 /* libssl.a.zip in Resources */,
+				EAC507781F4C232600493229 /* private_key.p12 in Resources */,
 				EABC62DD1F4B285D00A28946 /* AlipaySDK.bundle in Resources */,
 				6B05A01C1DD6CAC500F61223 /* HJCAdjustNumButton.bundle in Resources */,
 				6B0BE4E71DD4690E00729AA1 /* blueArrow@2x.png in Resources */,
@@ -3110,6 +3143,7 @@
 				EABC631B1F4B285E00A28946 /* UMSocialSDKPromptResources.bundle in Resources */,
 				6B5038361DC4AC3E0083A9CB /* MainTabViewController.xib in Resources */,
 				EABC62E01F4B285D00A28946 /* libcrypto.a.zip in Resources */,
+				EAC507791F4C232600493229 /* public_key.der in Resources */,
 				1809F9821DC0ABF500688016 /* LaunchScreen.storyboard in Resources */,
 				182AFA0F1DC48592001FDD0C /* LICENSE in Resources */,
 				EABC63131F4B285E00A28946 /* VKSdkResources.bundle in Resources */,
@@ -3197,6 +3231,7 @@
 				6B176F9C1E604F4E004DCE70 /* MASViewConstraint.m in Sources */,
 				6B0BE3E11DD1C7A000729AA1 /* APINetworkAgent.m in Sources */,
 				6B3CB6001E976D1A0088EC39 /* UserInfoModel.m in Sources */,
+				EAC5077F1F4C23DA00493229 /* RSAEncryptor.m in Sources */,
 				6B8FA57C1E8E605100BCA89A /* MZTimerLabel.m in Sources */,
 				6B55EAC01E9B23C200E2A666 /* ConfirmBorrowView.m in Sources */,
 				6B423D181E88B05D00963C6A /* priceView.m in Sources */,
@@ -3315,6 +3350,7 @@
 				EABC631E1F4B285E00A28946 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */,
 				6B176F9E1E604F4E004DCE70 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				6B0BE40B1DD1CE4400729AA1 /* AFURLResponseSerialization.m in Sources */,
+				EAC5077E1F4C23DA00493229 /* NSData+Base64.m in Sources */,
 				EABC62EB1F4B285D00A28946 /* RSADataVerifier.m in Sources */,
 				1809F9F01DC0BC9D00688016 /* rscode.c in Sources */,
 				EAC5076B1F4BF4C700493229 /* NSDictionary+String.m in Sources */,
@@ -3325,6 +3361,7 @@
 				1809F9741DC0ABF500688016 /* main.m in Sources */,
 				6B0BE40C1DD1CE4400729AA1 /* AFURLSessionManager.m in Sources */,
 				182AFA691DC499F5001FDD0C /* FXPageControl.m in Sources */,
+				EAC507741F4C1EFF00493229 /* NSString+MD5.m in Sources */,
 				6BEC1B111E9F61730081CEFE /* customerTableTwoCell.m in Sources */,
 				6B0BE4041DD1CE4400729AA1 /* AFHTTPRequestOperation.m in Sources */,
 				1809F9EE1DC0BC9D00688016 /* qrinput.c in Sources */,
@@ -3523,6 +3560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhejiang Sen Knapp Information Technology Co., Ltd (L489HA3PL5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3592,6 +3630,9 @@
 				PRODUCT_NAME = "仟易贷";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Micky/Utils/Micky-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -3600,6 +3641,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhejiang Sen Knapp Information Technology Co., Ltd (L489HA3PL5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3669,6 +3711,8 @@
 				PRODUCT_NAME = "仟易贷";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Micky/Utils/Micky-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

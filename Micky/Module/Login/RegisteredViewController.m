@@ -14,6 +14,7 @@
 #import "MZTimerLabel.h"
 #import "ExternalLinksViewController.h"
 #import "NSDictionary+String.h"
+#import "NSString+MD5.h"
 
 @interface RegisteredViewController ()<UITextFieldDelegate,UIActionSheetDelegate,MZTimerLabelDelegate>
 {
@@ -326,7 +327,10 @@
                                  @"pwd"      : [SystemUtil customer_md5:password_Field.text].lowercaseString,
                                  @"joincode" : [Gobal isEmptyString:recommend_Field.text]?@"":recommend_Field.text,
                                  };
+    
     NSString * urlParams = [parameters urlParams];
+    NSString * md5Str = [urlParams md5];
+    
 
     NSLog(@"params: %@", urlParams);
     
