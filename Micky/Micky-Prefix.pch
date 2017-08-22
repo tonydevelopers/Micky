@@ -1,0 +1,14 @@
+//
+//  MickyEasyCredit-Prefix.pch
+//  MickyEasyCredit
+//
+//  Created by 张宁 on 2016/10/29.
+//  Copyright © 2016年 apple. All rights reserved.
+//
+
+#ifndef Micky_Prefix_pch
+#define Micky_Prefix_pch
+
+#import "Macros.h"
+
+#endif /* Micky_Prefix_pch */

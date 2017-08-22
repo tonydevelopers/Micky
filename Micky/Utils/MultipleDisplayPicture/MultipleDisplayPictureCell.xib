@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MultipleDisplayPictureCell" id="gTV-IL-0wX" customClass="MultipleDisplayPictureCell">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AbU-dW-EST"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKS-f1-6Dj">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="ZlB-Jv-x3G"/>
+                            <constraint firstAttribute="height" constant="15" id="wdx-4P-Nmx"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="close_addPicture.png"/>
+                        <connections>
+                            <action selector="deletePic:" destination="gTV-IL-0wX" eventType="touchUpInside" id="aGT-9f-Ymf"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3K-ud-5RR">
+                        <state key="normal" backgroundImage="fb_pic_add.png"/>
+                        <connections>
+                            <action selector="add:" destination="gTV-IL-0wX" eventType="touchUpInside" id="xBX-8k-ddp"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="AbU-dW-EST" secondAttribute="trailing" id="CCl-Lo-MAb"/>
+                <constraint firstAttribute="trailing" secondItem="EKS-f1-6Dj" secondAttribute="trailing" id="LCl-kv-ikN"/>
+                <constraint firstItem="AbU-dW-EST" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ohm-l8-g37"/>
+                <constraint firstAttribute="bottom" secondItem="J3K-ud-5RR" secondAttribute="bottom" id="Q6J-AA-Tis"/>
+                <constraint firstItem="J3K-ud-5RR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="esh-dE-PMC"/>
+                <constraint firstAttribute="bottom" secondItem="AbU-dW-EST" secondAttribute="bottom" id="ih1-H9-HPb"/>
+                <constraint firstAttribute="trailing" secondItem="J3K-ud-5RR" secondAttribute="trailing" id="ljM-Zq-3PE"/>
+                <constraint firstItem="J3K-ud-5RR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sqr-b8-ODO"/>
+                <constraint firstItem="AbU-dW-EST" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wIb-Oe-dxH"/>
+                <constraint firstItem="EKS-f1-6Dj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zEu-QX-ns7"/>
+            </constraints>
+            <size key="customSize" width="173" height="139"/>
+            <connections>
+                <outlet property="add" destination="J3K-ud-5RR" id="RFR-xJ-Txf"/>
+                <outlet property="deletePic" destination="EKS-f1-6Dj" id="0Jo-xy-kGq"/>
+                <outlet property="image" destination="AbU-dW-EST" id="7mq-Ym-lN1"/>
+            </connections>
+            <point key="canvasLocation" x="414" y="216"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="close_addPicture.png" width="10" height="10"/>
+        <image name="fb_pic_add.png" width="55" height="55"/>
+    </resources>
+</document>
