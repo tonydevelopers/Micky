@@ -73,7 +73,7 @@ static UIWindow *curWindow;
     NSString *encryptStr = [RSAEncryptor encryptString:originalString publicKeyWithContentsOfFile:public_key_path];
     NSLog(@"加密前:%@", originalString);
     NSLog(@"加密后:%@", encryptStr);
-    NSLog(@"解密后:%@", [RSAEncryptor decryptString:encryptStr privateKeyWithContentsOfFile:private_key_path password:@"micky1286006188"]);
+    NSLog(@"解密后:%@", [RSAEncryptor decryptString:encryptStr privateKeyWithContentsOfFile:private_key_path password:@"***"]);
     
 //    [self setupRequestFilters];
     [self socialManagerShare];
